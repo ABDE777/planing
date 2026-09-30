@@ -1,0 +1,52 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef0f5;--fg:#1c2233;--bar:#fff;--bd:#cfd5e3;--ac:#2f3a8f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161d;--fg:#e8eaf2;--bar:#1e212b;--bd:#3a3f52;--ac:#5c6fe0}}
+:root[data-theme="dark"]{--bg:#14161d;--fg:#e8eaf2;--bar:#1e212b;--bd:#3a3f52;--ac:#5c6fe0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Arial,sans-serif}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);border-bottom:1px solid var(--bd);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:10px 14px}
+button{font:inherit;font-size:14px;border:1px solid var(--bd);background:var(--bar);color:var(--fg);padding:7px 14px;border-radius:8px;cursor:pointer}
+button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.sp{flex:1}.hint{font-size:12px;opacity:.7;padding:6px 14px}
+.wrap{overflow-x:auto;padding:14px}
+.paper{background:#fff;color:#111;margin:0 auto 18px;box-shadow:0 2px 12px #0003}
+#att{width:794px;min-height:1000px;padding:50px 70px;font-family:"Times New Roman",serif;font-size:15px;line-height:1.9;position:relative}
+#att img{display:block;margin:0 auto 70px;width:160px}
+#att h1{font-style:italic;text-align:center;font-size:26px;margin:0 0 30px}
+#att p{margin:0 0 12px;text-align:justify}
+.f{font-weight:bold;border-bottom:1px dashed #2f3a8f;background:#2f3a8f12;outline:none;padding:0 2px;border-radius:2px}
+.f:focus{background:#2f3a8f26}
+.foot{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:11px;line-height:1.5;color:#1F2A6B}
+.dt{font-size:13px;border:none;background:none;width:22px;cursor:pointer;opacity:.7}
+.card{background:var(--bar);border:1px solid var(--bd);border-radius:10px;padding:14px;margin:0 auto 14px;max-width:900px}
+.card h3{margin:0 0 10px;font-size:16px}
+.cfg{display:flex;gap:12px;flex-wrap:wrap;align-items:end;font-size:14px}
+.cfg label{display:flex;flex-direction:column;gap:4px;font-size:12px;opacity:.9}
+.cfg input,.cfg select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg)}
+.err{color:#d33;font-size:13px;margin-top:8px}
+.it{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--bd);flex-wrap:wrap}
+.it i{width:14px;height:14px;border-radius:3px;border:1px solid #0004;flex:none}
+.it .ty{font-size:11px;padding:2px 8px;border-radius:99px;background:var(--bg);border:1px solid var(--bd)}
+.it .tx{flex:1;min-width:180px}.it small{display:block;opacity:.7}
+.it button{padding:4px 10px;font-size:13px}
+.hide{display:none}
+#plan{display:none}
+.sheet{width:210mm;height:297mm;margin:0 auto;padding:10mm 8mm;background:#fff;color:#111;overflow:hidden}
+.sheet h2{margin:0 0 8px;font-size:22px}
+.g{display:grid;grid-template-columns:repeat(4,1fr)}
+.m{border:1px solid #000}.m h3{margin:0;text-align:center;font-size:13px;background:#b8c7e0;padding:4px;border-bottom:1px solid #000}
+.d{display:grid;grid-template-columns:12mm 1fr;height:7.4mm;border-bottom:1px solid #bbb;font-size:10px;overflow:hidden}
+.d b{padding:2.4mm 3px;border-right:1px solid #bbb;white-space:nowrap}
+.d .ev{font-size:8.5px;line-height:1.1;padding:2px 3px;overflow:hidden;display:flex;align-items:center;font-weight:600}
+.t{background:#bfe8bf}.s{background:#bcd6ff}.u{background:#f2f2f2}
+.lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;margin-top:8px}.lg i{display:inline-block;width:14px;height:10px;border:1px solid #888;margin-right:5px}
+@media print{
+ @page{size:A4 portrait;margin:0}
+ body{background:#fff}.bar,.hint{display:none!important}
+ #v1{display:block!important;padding:0;overflow:visible}#v2{display:none!important}
+ #plan{display:block!important}
+ .paper{box-shadow:none;margin:0}
+ #att{width:210mm;height:297mm;overflow:hidden;break-after:page}
+ .sheet{margin:0;break-after:page}.sheet:last-child{break-after:auto}
+ .f{border:none;background:none}.dt{display:none}
+}
