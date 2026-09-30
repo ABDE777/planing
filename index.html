@@ -4,42 +4,45 @@
 <title>Attestation & Planning</title>
 <link rel="stylesheet" href="css/style.css"></head><body>
 <div class="bar">
- <button id="b1" class="on">Attestation</button><button id="b2">Vacances</button>
- <span class="sp"></span><button id="pr">Imprimer (attestation + planning)</button><button id="rs">Réinitialiser</button>
+  <button id="b1" class="on">Attestation</button><button id="b2">Vacances</button>
+  <span class="sp"></span><button id="pr">Imprimer (attestation + planning)</button><button id="rs">Réinitialiser</button>
 </div>
-<div class="hint">Attestation : clique sur les textes en gras pour les modifier. Vacances : ajoute les vacances ; les séances (jeudi/vendredi à distance, samedi présentielle) sont automatiques. Tout est enregistré dans ce navigateur.</div>
+<div class="hint">Attestation : clique sur les textes en gras pour les modifier. Vacances : ajoute les vacances ; les séances (jeudi/vendredi à distance, samedi présentielle) sont automatiques.</div>
 <div class="wrap" id="v1"><div class="paper" id="att">
 <img src="media/logo.png" alt="SUP2I">
-<h1>Attestation d’inscription</h1>
-<p>Nous soussignés, <span class="f" data-k="dir" contenteditable>Mr KROUTI YOUNESS</span> Directeur pédagogique de l’Ecole Supérieure de l’Ingénierie et l’Innovation, autorisée par le Ministère de l’Enseignement Supérieur, de la Recherche Scientifique et de l’Innovation sous le <span class="f" data-k="num" contenteditable>n° 216/2004</span>, attestons par la présente que :</p>
-<p><span class="f" data-k="nom" contenteditable>Mr MAZGOURA Mounim</span> né le <span class="f" data-k="dn" contenteditable>30/01/2005</span> à <span class="f" data-k="ln" contenteditable>Casablanca</span> est inscrit à SUP2I en <span class="f" data-k="niv" contenteditable>1ère année</span> Cycle <span class="f" data-k="cyc" contenteditable>Ingénieure d’état</span> Option <span class="f" data-k="opt" contenteditable>Génie Informatique</span> de l’année universitaire <span class="f" data-k="an" contenteditable>2026/2027</span>, et qui va suivre des cours selon le planning suivant :</p>
+<h1>Attestation d'inscription</h1>
+<p>Nous soussignés, <span class="f" data-k="dir" contenteditable>Mr KROUTI YOUNESS</span> Directeur pédagogique de l'Ecole Supérieure de l'Ingénierie et l'Innovation, autorisée par le Ministère de l'Enseignement Supérieur, certifions que :</p>
+<p><span class="f" data-k="nom" contenteditable>Mr MAZGOURA Mounim</span> né le <span class="f" data-k="dn" contenteditable>30/01/2005</span> à <span class="f" data-k="ln" contenteditable>Casablanca</span>, Maroc, titulaire d'un <span class="f" data-k="dp" contenteditable>Baccalauréat</span>, est régulièrement inscrit(e) à notre établissement pour l'année académique <span class="f" data-k="pyear" contenteditable>2026-2027</span> en <span class="f" data-k="filiere" contenteditable>Ingénieur Informatique, 1ère année</span>. L'intéressé(e) suit assidûment les enseignements suivants :</p>
 <div><span class="f" data-k="j1" contenteditable>Jeudi de 19h à 21h</span></div>
 <div><span class="f" data-k="j2" contenteditable>Vendredi de 19h à 21h</span></div>
 <div><span class="f" data-k="j3" contenteditable>Samedi de 9h à 17h</span></div>
-<p style="margin-top:22px">Cette attestation est délivrée à l’intéressé (e), pour servir et valoir ce que de droit.</p>
-<p style="margin-top:22px">Fait à <span class="f" data-k="ville" contenteditable>Casablanca</span>, le <span class="f" data-k="date" contenteditable>29/09/2026</span> <input type="date" class="dt" id="dp" title="Choisir une date"></p>
+<p style="margin-top:22px">Cette attestation est délivrée à l'intéressé (e), pour servir et valoir ce que de droit.</p>
+<p style="margin-top:22px">Fait à <span class="f" data-k="ville" contenteditable>Casablanca</span>, le <span class="f" data-k="date" contenteditable>29/09/2026</span> <input type="date" class="dt" id="dp"></p>
 <p style="text-align:center;margin-top:40px">La Direction Pédagogique</p>
-<div class="foot">Supemir sarl- Ecole Supérieure privée Reconnu par l’Etat - autorisée par le MES sous le n°216/2004<br>Km 9 susd route n°1 Casa à Rabat - Ain Sebaa – Casablanca (Maroc)<br>RC 12963 Casablanca – ICE : 001621178000023<br>Tél : +212 5 22 47 34 81 – Web : www.supemir.com</div>
+<div class="foot">Supemir sarl- Ecole Supérieure privée Reconnu par l'Etat - autorisée par le MES sous le n°216/2004<br>Km 9 susd route n°1 Casa à Rabat - Ain Sebaa – Casablanca (Maroc)</div>
 </div></div>
 <div class="wrap hide" id="v2">
- <div class="card"><h3>Réglages du planning</h3>
-  <div class="cfg">
-   <label>Filière <input id="pt" size="30"></label>
-   <label>Année <input id="py" size="10"></label>
-   <label>Mois de départ <input type="month" id="st"></label>
-   <label>Mois de fin <input type="month" id="se"></label>
-  </div></div>
- <div class="card"><h3 id="ft">Ajouter des vacances</h3>
-  <div class="cfg">
-   <label id="lt">Titre <input id="et" dir="auto" placeholder="ex : Vacances 1er semestre" size="28"></label>
-   <label>Date de début <input type="date" id="ed"></label>
-   <label id="ln">Durée (jours) <input type="number" id="en" min="1" value="1" style="width:80px"></label>
-   <button class="on" id="ok">Ajouter</button><button id="cx" class="hide">Annuler</button>
-  </div><div id="er" class="err"></div></div>
- <div class="card"><h3>Vacances <span id="cnt"></span></h3>
-  <div class="cfg"><label>Rechercher par titre <input id="sq" placeholder="titre..."></label>
-   <label>par date <input type="date" id="sd"></label><button id="sc">Effacer</button><button id="sr">Recharger les vacances officielles 2026/2027</button></div>
-  <div id="list"></div></div>
+  <div class="card"><h3>Réglages du planning</h3>
+   <div class="cfg">
+    <label>Filière <input id="pt" size="30"></label>
+    <label>Année <input id="py" size="10"></label>
+    <div class="cfg-group">
+      <label>Mois de départ <input type="month" id="st"></label>
+      <label>Jour de départ <input type="number" id="sd" min="1" max="31" style="width:80px"></label>
+    </div>
+    <label>Mois de fin <input type="month" id="se"></label>
+   </div></div>
+  <div class="card"><h3 id="ft">Ajouter des vacances</h3>
+   <div class="cfg">
+    <label id="lt">Titre <input id="et" dir="auto" placeholder="ex : Vacances 1er semestre" size="28"></label>
+    <label>Date de début <input type="date" id="ed"></label>
+    <label id="ln">Durée (jours) <input type="number" id="en" min="1" value="1" style="width:80px"></label>
+    <button class="on" id="ok">Ajouter</button><button id="cx" class="hide">Annuler</button>
+   </div><div id="er" class="err"></div></div>
+  <div class="card"><h3>Vacances <span id="cnt"></span></h3>
+   <div class="cfg"><label>Rechercher par titre <input id="sq" placeholder="titre..."></label>
+    <label>par date <input type="date" id="sd2"></label><button id="sc">Effacer</button><button id="sr">Recharger les vacances officielles 2026/2027</button></div>
+   <div id="list"></div></div>
 </div>
 <div id="plan"></div>
 <script src="js/app.js"></script></body></html>
